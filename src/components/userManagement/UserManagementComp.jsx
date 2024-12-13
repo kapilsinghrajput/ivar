@@ -56,7 +56,6 @@ const UserManagementComp = ({ datalist }) => {
     }
   };
 
-
   return (
     <div className="w-full ">
       <Toaster />
@@ -141,8 +140,6 @@ const UserManagementComp = ({ datalist }) => {
       </div>
     </div>
   );
-
-
 };
 
 export default UserManagementComp;

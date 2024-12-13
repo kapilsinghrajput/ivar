@@ -5,7 +5,11 @@ import { verifyToken } from "@/lib/utils";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+
+const baseUrl = process.env.BASE_NEXT_PUBLIC_API_URLURL || "http://localhost:3000"; // Example fallback
+
+
+
 
 export default async function DashboardLayout({ children }) {
   const cookieStore = await cookies();
@@ -32,6 +36,8 @@ export default async function DashboardLayout({ children }) {
     User = result.User;
 
     if (User.role_id) {
+console.log("baseUrlttt===", baseUrl);
+
       const response = await fetch(
         `${baseUrl}/api/adminrole/rolesget/${User.role_id}`
       );

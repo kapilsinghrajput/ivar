@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
+console.log("list role ull", baseUrl);
+
 
 export default function ListRole() {
   const { userData, Roles } = useUser();
