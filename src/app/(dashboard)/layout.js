@@ -6,8 +6,9 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 
-const baseUrl = process.env.BASE_NEXT_PUBLIC_API_URLURL || "http://localhost:3000"; // Example fallback
+const baseUrl = process.env.NEXT_PUBLIC_API_URL
 
+// console.log();
 
 
 
