@@ -16,7 +16,7 @@ export default function ListRole() {
 
     const fetchUserAdminsFun = async () => {
       const fetchUserAdmins = await fetch(
-        `${baseUrl}api/adminrole`,
+        `/api/adminrole`,
         {
           method: "GET",
         }
@@ -29,7 +29,7 @@ export default function ListRole() {
   }, []);
 
   async function deleteRole(RoleId) {
-    const response = await fetch(`api/adminrole/${RoleId}`, {
+    const response = await fetch(`/api/adminrole/${RoleId}`, {
       method: "DELETE",
     });
 
