@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
-console.log("list role ull", baseUrl);
+// console.log("list role ull", baseUrl);
 
 
 export default function ListRole() {
@@ -13,9 +13,11 @@ export default function ListRole() {
   const [datalist, setdatalist] = useState([]);
 
   useEffect(() => {
+    console.log("list role ull=======>>>>>", baseUrl);
+
     const fetchUserAdminsFun = async () => {
       const fetchUserAdmins = await fetch(
-        `${baseUrl}/api/adminrole`,
+        `${baseUrl}api/adminrole`,
         {
           method: "GET",
         }
