@@ -29,7 +29,7 @@ export default function ListRole() {
   }, []);
 
   async function deleteRole(RoleId) {
-    const response = await fetch(`/api/adminrole/${RoleId}`, {
+    const response = await fetch(`api/adminrole/${RoleId}`, {
       method: "DELETE",
     });
 
