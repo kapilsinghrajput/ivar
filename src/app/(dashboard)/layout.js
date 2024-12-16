@@ -28,7 +28,7 @@ export default async function DashboardLayout({ children }) {
   try {
     const result = await verifyToken(token);
 
-    if (!result || !result.User) {
+    if ( !result?.User) {
       console.warn("Invalid or expired token.");
       redirect("/auth"); // Redirect if the token is invalid
       return null;
