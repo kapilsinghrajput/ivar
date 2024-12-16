@@ -37,7 +37,7 @@ export default async function DashboardLayout({ children }) {
     User = result.User;
 
     if (User.role_id) {
-console.log("baseUrlttt===", baseUrl);
+console.log("baseUrl is ===>>", baseUrl);
 
       const response = await fetch(
         `${baseUrl}/api/adminrole/rolesget/${User.role_id}`
