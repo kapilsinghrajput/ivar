@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useUser } from "@/context/UserContext";
-const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
 
 
@@ -12,7 +11,6 @@ export default function ListRole() {
   const [datalist, setdatalist] = useState([]);
 
   useEffect(() => {
-    console.log("list role ull=======>>>>>", baseUrl);
 
     const fetchUserAdminsFun = async () => {
       const fetchUserAdmins = await fetch(
